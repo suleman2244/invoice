@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt" class="no-js">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=11">
+        <meta name="author" content="Autoridade Tribut&aacute;ria e Aduaneira [https://www.portaldasfinancas.gov.pt/at/html/index.html]" />
+        <meta name="description" content = "e-fatura" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!--[if lt IE 7]>
+        <meta http-equiv="refresh" content="0;url=/factemipf_static/html/ie6.html" />
+		<![endif]-->
+		
+	    <!--[if IE]>
+	    	<link rel="stylesheet" href="/factemipf_static/css/ie.css?cb=1.19.7-11350" />
+	    <![endif]-->
+		
+        <title>e-fatura</title>
+
+        <link href="/factemipf_static/favicons/favicon.ico" rel="icon" type="image/x-icon" />
+        <link rel="stylesheet" href="/factemipf_static/css/styles.css?cb=1.19.7-11350" />
+
+        <!--[if IE 8]>
+        <link rel="stylesheet" href="/factemipf_static/css/ie8.css?cb=1.19.7-11350" />
+        <![endif]-->
+
+		<link rel="stylesheet" href="/factemipf_static/css/bootstrap/font-awesome.min.css?cb=1.19.7-11350">
+
+        <!--[if IE 7]>
+		  <link rel="stylesheet" href="/factemipf_static/css/bootstrap/font-awesome-ie7.min.css?cb=1.19.7-11350">
+		<![endif]-->
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="/factemipf_static/css/ie8-styles.css?cb=1.19.7-11350">
+		<![endif]-->
+        
+        <link rel="stylesheet" href="/factemipf_static/css/alteracoesCss.css?cb=1.19.7-11350" />
+	
+		<link rel="stylesheet" href="/factemipf_static/css/print.css?cb=1.19.7-11350" media="Print">
+		
+        <script type="text/javascript" src="/factemipf_static/js/modernizr.min.js?cb=1.19.7-11350"></script>
+
+        <!--[if lte IE 9]>
+        <script type="text/javascript" src="/factemipf_static/js/ie/respond.js"></script>
+
+        <script type="text/javascript" src="/factemipf_static/js/ie/matchMedia.js"></script>
+        <script type="text/javascript" src="/factemipf_static/js/ie/matchMedia.addListener.js"></script>
+        <![endif]-->
+
+
+		<!-- jQuery -->
+		<script type="text/javascript" src="/factemipf_static/js/jquery/jquery-1.8.2.min.js?cb=1.19.7-11350"></script>
+		<script type="text/javascript">
+	        jQuery.noConflict();
+	    </script>
+		<script type="text/javascript" src="/factemipf_static/js/jquery/jquery.json-2.3.js?cb=1.19.7-11350"></script>
+
+		<!-- Bootstrap -->
+        <script type="text/javascript" src="/factemipf_static/js/bootstrap/bootstrap.min.js?cb=1.19.7-11350"></script>
+
+        <script type="text/javascript" src="/factemipf_static/js/util/jstorage.js?cb=1.19.7-11350"></script>
+        <script type="text/javascript" src="/factemipf_static/js/common/factemipf.catalogs.js?cb=1.19.7-11350"></script>
+        
+        <script type="text/javascript" src="/factemipf_static/js/mainTemplateInit.js?cb=1.19.7-11350"></script>
+	 	<script type="text/javascript" src="/factemipf_static/js/util/numericField.js?cb=1.19.7-11350"></script>  
+        <script type="text/javascript" src="/factemipf_static/js/common/factemipf.polyfill.js?cb=1.19.7-11350"></script>
+
+		<noscript>Para visualizar correctamente esta p&aacute;gina, por favor active o Javascript no seu navegador.</noscript> 
+    </head>
+    <body>
+    <div id="wrapper">
+        <header class="header">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <h1 class="logo-efatura"><a href="/" title="e-fatura">e-fatura</a></h1>
+                        <nav class="shortcut-nav clearfix">
+                            <ul>
+                                <li>
+                                    <a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/sobre.aspx"><span class="ico-about"></span>Sobre o e-fatura</a>
+                                </li>
+                                <li>
+                                    <a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/faqs.aspx"><span class="ico-faq"></span>Faq</a>
+                                </li>
+                                <li>
+                                    <a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/contatos.aspx"><span class="ico-contacts"></span>Contactos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="header-menu clearfix mobile-toggle-submenu">
+                <!--<nav class="header-menu mobile-toggle-submenu">-->
+            <div class="relative">
+                <div class="menu-scroll">
+                    <ul>
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/home.action" >Faturas</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/painelAdquirente.action" >Consumidor</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarDocumentosAdquirente.action">Verificar Faturas</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/registarDocumentoAdquirenteForm.action">Registar Faturas</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/resolverListaPendenciasAdquirenteForm.action">Resolver Pendências</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarListaDivergenciasAlertasAdquirente.action">Apoio ao Cumprimento</a></li>
+                                        <!-- 
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/registarDocumentoEstrangeiroAdquirenteForm.action">Registar Faturas Estrangeiro</a></li>
+                                         -->
+                                    </ul>
+                                    <span></span>
+                                </div>
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/painelEmitente.action" >Comerciante</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/enviarSaftAppletForm.action">Enviar Ficheiro</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarListaFicheirosEmitente.action">Consultar Ficheiros</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/registarDocumentoEmitenteForm.action">Recolher Fatura</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarDocumentosEmitente.action">Consultar Faturas</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/apoioCumprimentoEmitente.action">Apoio ao Cumprimento</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/home.action" >Fatura Sorte</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/verMeusCupoes.action" >Os Meus Cup&otilde;es</a></li>
+	                                    <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/pesquisarConcurso.action" >Ver Concursos</a></li>
+	                                    <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/definirPreferenciasForm.action" >Op&ccedil;&atilde;o de Participa&ccedil;&atilde;o</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/homeBeneficio.action" >Despesas Dedut&iacute;veis IRS</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/painelAdquirente.action" >Consumidor</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarDocumentosIRSAdquirente.action">Verificar Faturas</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/registarDocumentoAdquirenteForm.action">Registar Faturas</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a>Despesas da Atividade</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <h2>Resumo</h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarDocumentosDespesasAtivAdquirente.action">Verificar Despesas</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/escolherEntidade.action" >Doc. de Transporte</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelRemetente.action">Remetente dos Bens</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/emitirDocTranspForm.action" >Emitir Documentos</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/enviarSaftAppletForm.action" >Enviar Ficheiros</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarFicheirosForm.action" >Consultar Ficheiros</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelInserir.action" >Inserir Elementos</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDocsTransp.action" >Consultar Documentos</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelAdquirente.action" >Adquirente de Produtos Agrícolas</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/emitirDTProdAgricolaForm.action" >Emitir Guia Global</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDTProdAgricolaParcial.action" >Inserir Guia Parcial</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDTProdAgricola.action" >Consultar Guias</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDocsTranspDest.action" >Destinatário dos Bens</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDocsTranspDest.action" >Consultar Documentos</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                                <div class="col">
+                                    <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultaDocTranspAgentes.action" >Agentes Fiscalizadores</a></h2>
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultaDocTranspAgentes.action" >Consultar Documentos</a></li>
+                                    </ul>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelTipografia.action" >Tipografias</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/comunicacaoReqImpressosForm.action" >Comunicar Gamas de Documentos</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarGamas.action" >Consultar Gamas de Documentos</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://faturas.portaldasfinancas.gov.pt/painelEmitente.action" >Inventários</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <ul>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/enviarStockAppletForm.action">Enviar Ficheiro</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarListaFicheirosInventarioEmitente.action">Consultar Ficheiros</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="hide-desktop">
+                            <a href="/" title="e-Fatura">e-Fatura</a>
+                            <div class="mega-menu clearfix">
+                                <div class="col">
+                                    <ul>
+                                        <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/sobre.aspx" >Sobre o E-Fatura</a></li>
+                                        <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/faqs.aspx" >Perguntas Frequentes</a></li>
+                                        <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/contatos.aspx" >Contactos</a></li>
+                                        <li><a href="https://faturas.portaldasfinancas.gov.pt/painelInicialProdSoftware.action" >Produtores de Software</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    
+                    <div class="mini-logo efatura"></div>
+                </div>
+            </div>
+            </nav>
+        </header>
+
+        
+        <div class="container home fatsorte-messages">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class='alert alert-success  hide '>
+                        <button type="button" class="close" onclick="Opensoft.messages.clearSuccessMessage()" onkeypress="Opensoft.messages.clearSuccessMessage()">&#215;</button>
+                        	                    	<span></span>
+	                                        </div>
+
+                    <div class="alert alert-info  hide ">
+                        <button type="button" class="close" onclick="Opensoft.messages.clearInfoMessage()" onkeypress="Opensoft.messages.clearInfoMessage()">&#215;</button>
+                        <span></span>
+                    </div>
+
+                    <div class="alert alert-block  hide ">
+                        <button type="button" class="close" onclick="Opensoft.messages.clearWarningMessage()" onkeypress="Opensoft.messages.clearWarningMessage()">&#215;</button>
+                        <span></span>
+                    </div>
+
+                    <div class="alert alert-error  hide ">
+                                                                                    <span></span>
+                                                                        </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ficheiro especificos da página -->
+<script type="text/javascript" src="/factemipf_static/js/jquery/excanvas.min.js?cb=1.19.7-11350"></script>        
+      <script type="text/javascript" src="/factemipf_static/js/jquery/jquery.easy-pie-chart.js?cb=1.19.7-11350"></script>
+      <script type="text/javascript" src="/factemipf_static/js/jquery/jquery.flexslider.js?cb=1.19.7-11350"></script>
+      <script type="text/javascript" src="/factemipf_static/js/main.js?cb=1.19.7-11350"></script>
+      <script type="text/javascript" src="/factemipf_static/js/geral/painelInicial.js?cb=1.19.7-11350"></script>
+      
+      
+      <link rel="stylesheet" href="/factemipf_static/css/jquery/jquery.easy-pie-chart.css?cb=1.19.7-11350" />
+      <link rel="stylesheet" href="/factemipf_static/css/jquery/flexslider.css?cb=1.19.7-11350" />
+
+      <script type="text/javascript" src="/factemipf_static/js/flot/jquery.flot.js?cb=1.19.7-11350"></script>
+      <script type="text/javascript" src="/factemipf_static/js/flot/jquery.flot.axislabels.js?cb=1.19.7-11350"></script>
+      <script type="text/javascript" src="/factemipf_static/js/flot/jquery.flot.tooltip.js?cb=1.19.7-11350"></script>
+      
+      <script>
+	jQuery(document).ready(function() {
+		jQuery('.toolTipArea').tooltip();
+	});
+</script>
+
+<div class="slider-wrapper ">
+    <section class="container containerHomePage">
+        <div class="flexslider" id="main-slider">
+            <ul class="slides clearfix">
+
+                
+                <li class="flex-active-slide">
+                    <div class="">
+                        <h2>FATURAS EMITIDAS E COMUNICADAS</h2>
+                    </div>
+                    <div class="row second-row">
+                        <div class="span6 offset1">
+                            <h3 class="leftText" >Janeiro a Setembro de 2019</h3>
+                            <div class="containerProgressBar">
+                                <div class="textHover">4.390,4 Milh&otilde;es</div>
+                                <div class="progress progress-info" style="width: 100%;">
+                                    <div class="bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <h3 class="leftText" >Per&iacute;odo Hom&oacute;logo em 2018</h3>
+                            <div class="containerProgressBar">
+                                <div class="textHover">4.339,4 Milh&otilde;es</div>
+                                <div class="progress progress-info" style="width: 99%;">
+                                    <div class="bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span5 variacaoContainer" >
+                                                            <div class="textoVariacao showTooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Variação de faturas emitidas">
+                                	+ 1,2%
+                                </div>
+                                <img alt="Variação homologa de + 1,2%" src="/factemipf_static/img/variacaoAzul.png">
+                                <div class="verMaisInfoFaturas">
+	                              	<a href="#graficoModalTotalFaturas-1" role="button" data-toggle="modal"><i class="icon-bar-chart icon-3x"></i><br/>saber mais</a>
+	                             </div>
+                                                    </div>
+                        <div class="span6 offset1">
+		                     <p class="infoDadosAtualizados">Dados atualizados em 2019-11-20</p>
+                        </div>
+                    </div>
+                </li>
+
+                <div id="graficoModalTotalFaturas-1" class="modal hide fade graficoModal" tabindex="-1" role="dialog">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 style="text-align: left">FATURAS EMITIDAS E COMUNICADAS</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="span8 flotChartContainer" id="graphContainerTotalFaturas-1">
+                        </div>
+                        <div class="span1 margin-top-30" id="labelContainerTotalFaturas-1">
+                        </div>
+                        <div class="span7 infoDataAtualizacao">
+                            <p class="infoDadosAtualizados centerText-1" style="text-align: center"> Valores acumulados referentes a períodos homólogos e atualizados em 2019-11-20</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Script para iniciar os gráficos -->
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
+
+                        var dataInputTotalFaturas = [
+                            {
+                                label: "2019",
+                                color: "#87B810",
+                                data: [[1,4660],[2,9031],[3,13879],[4,18575],[5,23664],[6,28496],[7,33781],[8,39013],[9,43904]],
+                                                                    lines: { show: true, color: "#87B810"},
+                                    points: { show: true}
+                        },
+
+                        {
+                            label: "2018",
+                                color: "#0084CC",
+                            data: [[1,4565],[2,8799],[3,13520],[4,18133],[5,23134],[6,28010],[7,33210],[8,38475],[9,43394]],
+                                                    lines: { show: true, color: "#0084CC"},
+                            points: { show: true }
+                        }];
+
+
+                        var grafInit =false;
+
+
+                        jQuery('#graficoModalTotalFaturas-1').on('shown', function () {
+                        ;
+                        ;
+                        ;
+                            if(!grafInit){
+                                Opensoft.factemipf.PainelInicial.initChart({
+                                    chartOptions:{
+                                        data: dataInputTotalFaturas,
+                                        container: "#graphContainerTotalFaturas-1",
+                                        labelContainer: "#labelContainerTotalFaturas-1",
+                                        xaxisMax: 9 + 0.9,
+                                        yaxisMax: 48294
+                                    }});
+                            }
+                        });
+
+                        jQuery('.showTooltip').tooltip();
+                        Opensoft.factemipf.PainelInicial.init();
+                    });
+                </script>
+
+                
+                <li class="flex-active-slide">
+                    <div class="">
+                        <h2>FATURAS COM NIF EMITIDAS A CONSUMIDORES FINAIS</h2>
+                    </div>
+                    <div class="row second-row">
+                        <div class="span6 offset1">
+                            <h3 class="leftText" >Janeiro a Setembro de 2019</h3>
+                            <div class="containerProgressBar">
+                                <div class="textHover">1.044,6 Milh&otilde;es</div>
+                                <div class="progress progress-info" style="width: 100%;">
+                                    <div class="bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <h3 class="leftText" >Per&iacute;odo Hom&oacute;logo em 2018</h3>
+                            <div class="containerProgressBar">
+                                <div class="textHover">977,4 Milh&otilde;es</div>
+                                <div class="progress progress-info" style="width: 94%;">
+                                    <div class="bar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span5 variacaoContainer" >
+                                                            <div class="textoVariacao showTooltip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Variação de faturas emitidas">
+                                	+ 6,9%
+                                </div>
+                                <img alt="Variação homologa de + 6,9%" src="/factemipf_static/img/variacaoAzul.png">
+                                <div class="verMaisInfoFaturas">
+	                              	<a href="#graficoModalTotalFaturas-2" role="button" data-toggle="modal"><i class="icon-bar-chart icon-3x"></i><br/>saber mais</a>
+	                             </div>
+                                                    </div>
+                        <div class="span6 offset1">
+		                     <p class="infoDadosAtualizados">Dados atualizados em 2019-11-20</p>
+                        </div>
+                    </div>
+                </li>
+
+                <div id="graficoModalTotalFaturas-2" class="modal hide fade graficoModal" tabindex="-1" role="dialog">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3 style="text-align: left">FATURAS COM NIF EMITIDAS A CONSUMIDORES FINAIS</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="span8 flotChartContainer" id="graphContainerTotalFaturas-2">
+                        </div>
+                        <div class="span1 margin-top-30" id="labelContainerTotalFaturas-2">
+                        </div>
+                        <div class="span7 infoDataAtualizacao">
+                            <p class="infoDadosAtualizados centerText-2" style="text-align: center"> Valores acumulados referentes a períodos homólogos e atualizados em 2019-11-20</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Script para iniciar os gráficos -->
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
+
+                        var dataInputTotalFaturas = [
+                            {
+                                label: "2019",
+                                color: "#87B810",
+                                data: [[1,1168],[2,2260],[3,3456],[4,4602],[5,5856],[6,6990],[7,8177],[8,9295],[9,10446]],
+                                                                    lines: { show: true, color: "#87B810"},
+                                    points: { show: true}
+                        },
+
+                        {
+                            label: "2018",
+                                color: "#0084CC",
+                            data: [[1,1114],[2,2143],[3,3258],[4,4347],[5,5517],[6,6604],[7,7680],[8,8698],[9,9774]],
+                                                    lines: { show: true, color: "#0084CC"},
+                            points: { show: true }
+                        }];
+
+
+                        var grafInit =false;
+
+
+                        jQuery('#graficoModalTotalFaturas-2').on('shown', function () {
+                        ;
+                        ;
+                        ;
+                            if(!grafInit){
+                                Opensoft.factemipf.PainelInicial.initChart({
+                                    chartOptions:{
+                                        data: dataInputTotalFaturas,
+                                        container: "#graphContainerTotalFaturas-2",
+                                        labelContainer: "#labelContainerTotalFaturas-2",
+                                        xaxisMax: 9 + 0.9,
+                                        yaxisMax: 11489
+                                    }});
+                            }
+                        });
+
+                        jQuery('.showTooltip').tooltip();
+                        Opensoft.factemipf.PainelInicial.init();
+                    });
+                </script>
+
+                
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+<div class="container containerHomePage home">
+
+	<section class=" row boxAreasInternas">
+        <div class="span6 centerText fill">
+        	<div class="infoContainer">
+				<!-- Main hero unit for a primary marketing message or call to action -->
+				<div class="hero-unit">
+					<h1>Sr. Consumidor</h1>
+	                <!-- h4>Fatura com NIF garante o seu benef&iacute;cio fiscal</h4-->
+				</div>
+	            <p  class="textoInfo">
+	                Na área do consumidor poderá <a href="consultarDocumentosAdquirente.action">verificar</a> e <a href="registarDocumentoAdquirenteForm.action">registar</a> as suas faturas e
+                    <a href="consultarListaDivergenciasAlertasAdquirente.action" title="Consultar alertas pendentes">consultar alertas pendentes</a>, bem como aceder a outras funcionalidades.
+	            </p>
+	            <p>
+	                <a class="btn btn-primary btn-large" href="painelAdquirente.action">Consumidor</a>
+	            </p>
+        	</div>
+        </div>
+        <div class="span6 centerText fill">
+        	<div class="infoContainer">
+			    <!-- Main hero unit for a primary marketing message or call to action -->
+			    <div class="hero-unit">
+			        <h1>SR. COMERCIANTE</h1>
+			    </div>
+	            <p class="textoInfo">
+	                Na área do comerciante poderá <a href="enviarSaftAppletForm.action">enviar</a> e <a href="consultarListaFicheirosEmitente.action">consultar</a> ficheiros SAFT-PT, 
+	                <a href="registarDocumentoEmitenteForm.action">recolher</a> e <a href="consultarDocumentosEmitente.action">consultar</a> faturas, aceder às funcionalidade de
+	                <a href="consultarListaDivergenciasEmitente.action">apoio ao cumprimento</a> e
+	                <a href="consultarListaDivergenciasAlertasEmitente.action">verificar alertas pendentes</a>.
+	            </p>
+	            <p>
+	                <a class="btn btn-primary btn-large" href="painelEmitente.action">Comerciante</a>
+	            </p>
+	        </div>
+        </div>
+    </section>
+</div>
+
+        <footer class="footer-wrapper">
+            <nav class="footer-menu visible-desktop">
+                <div class="container">
+                    <div class="one-six">
+                        <h2><a href="https://faturas.portaldasfinancas.gov.pt/home.action">Faturas</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/painelAdquirente.action">Consumidor</a></li>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/painelEmitente.action">Comerciante</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six">
+                        <h2><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/home.action" >Fatura Sorte</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/verMeusCupoes.action">Os Meus Cup&otilde;es</a></li>
+	                        <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/pesquisarConcurso.action">Ver Concursos</a></li>
+	                        <li><a href="https://faturas.portaldasfinancas.gov.pt/FatSorte/definirPreferenciasForm.action" >Op&ccedil;&atilde;o de Participa&ccedil;&atilde;o</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six">
+                        <h2><a href="https://faturas.portaldasfinancas.gov.pt/homeBeneficio.action" >Despesas dedut&iacute;veis IRS</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/painelAdquirente.action">Consumidor</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six fourth">
+                        <h2><a>Despesas da Atividade</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarDocumentosDespesasAtivAdquirente.action">Verificar Despesas</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six">
+                        <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/escolherEntidade.action" >Doc. de Transporte</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelRemetente.action">Remetente dos Bens</a></li>
+	                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelAdquirente.action">Adquirente de Produtos Agr&iacute;colas</a></li>
+	                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarDocsTranspDest.action">Destinat&aacute;rio dos Bens</a></li>
+	                        <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultaDocTranspAgentes.action">Agentes Fiscalizadores</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six">
+                        <h2><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/painelTipografia.action" >Tipografias</a></h2>
+                        <ul>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/comunicacaoReqImpressosForm.action" >Comunicar Gamas de Documentos</a></li>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/DocTransporte/consultarGamas.action" >Consultar Gamas de Documentos</a></li>
+                        </ul>
+                    </div>
+                    <div class="one-six fourth">
+		                <h2><a href="https://faturas.portaldasfinancas.gov.pt/painelEmitente.action" title="E-Fatura">Inventários</a></h2>
+		                <ul>
+		                    <li><a href="https://faturas.portaldasfinancas.gov.pt/enviarStockAppletForm.action">Enviar Ficheiro</a></li>
+		                    <li><a href="https://faturas.portaldasfinancas.gov.pt/consultarListaFicheirosInventarioEmitente.action">Consultar Ficheiros</a></li>
+		                </ul>
+		            </div>
+                    <div class="one-six">
+                        <h2><a href="/" title="E-Fatura">E-Fatura</a></h2>
+                        <ul>
+                            <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/sobre.aspx">Sobre o E-Fatura</a></li>
+                            <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/faqs.aspx">Perguntas frequentes</a></li>
+                            <li><a href="http://info.portaldasfinancas.gov.pt/pt/faturas/Pages/contatos.aspx">Contactos</a></li>
+                            <li><a href="https://faturas.portaldasfinancas.gov.pt/painelInicialProdSoftware.action">Produtores de Software</a></li>
+                        </ul>
+                    </div>
+
+                    <span class="divider"></span>
+                    <span class="divider divd-two"></span>
+                    <span class="divider divd-three"></span>
+                    <span class="divider divd-four"></span>
+                    <span class="divider divd-five"></span>
+                    <span class="divider divd-six"></span>
+                    <span class="divider divd-seven"></span>
+                </div>
+            </nav>
+
+            <div class="container row-fluid">
+                <div class="span4">
+                    <a href="http://www.portaldasfinancas.gov.pt" title="Portal das Finan&#231;as" target="_blank" class="footer-logo">Portal das Finan&#231;as</a>
+                </div>
+                <div class="span4 center">
+                    <h2><span class="phone"></span>217 206 707</h2>
+                    <div>Linha de apoio</div>
+                </div>
+                <div class="span4 w3c">
+                     <div class="row hidden-phone">
+                        <a href="http://www.w3.org/WAI/WCAG1AA-Conformance" title="Explanation of Level Double-A Conformance" target="_blank">
+                            <img src="/factemipf_static/img/wcag1AA-blue.png" alt="Acessibilidade" title="Acessibilidade">
+                        </a>
+                        <span>Site otimizado para IE 9,<br>Chrome, Firefox 16 e Safari 5<br/></span>
+                    </div>
+                    <div class="row">
+                        <p>Vers&atilde;o e-fatura: 1.19.7-11350</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/factemipf_static/js/enquire.min.js?cb=1.19.7-11350"></script>
+    <script src="/factemipf_static/js/jquery/jquery.mobile.custom.min.js?cb=1.19.7-11350"></script>
+    <script src="/factemipf_static/js/jquery/smartresize.js?cb=1.19.7-11350"></script>
+    <script src="/factemipf_static/js/app.js?cb=1.19.7-11350"></script>
+    </body>
+</html>
+
+
+
